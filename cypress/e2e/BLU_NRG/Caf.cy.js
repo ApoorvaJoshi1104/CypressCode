@@ -79,7 +79,7 @@ describe ('Energy', () => {
         cy.get('[class="sc-6e8c36d4-5 jAyAGj"]').eq(2)
             .invoke('text')
             .then((value2) => {
-          const data ={
+          const data ={               
              Key1 : value1.trim().replace('Reference Number:', ''), 
              Key2 : value2.trim().replace('Reference Number:', '')
           };
