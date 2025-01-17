@@ -20,7 +20,7 @@ describe ('Energy', () => {
        cy.get('[class="sc-6e8c36d4-9 sc-c2fffe2d-2 kcIjQb hLZmAf input"]').eq(1).type('apoorva.joshi@cimet.com.au');
        cy.get('[class="sc-6e8c36d4-9 sc-c2fffe2d-2 kcIjQb hLZmAf input"]').eq(2).type('0420580919');
        cy.get('[type="submit"]').click();
-       cy.wait(250000);
+       cy.wait(300000);
        cy.get('[class="sc-5f6771a7-0 fokmtS"]').eq(5).click();
        cy.get('[class="sc-cb7c3484-0 hrIcIT"]').eq(0).click();     
        cy.wait(100000);
