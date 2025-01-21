@@ -14,13 +14,13 @@ describe ('Energy', () => {
        cy.get('[class="sc-309fbc61-0 fMPLzp"]').eq(10).click();
        cy.get('[type="checkbox"]').click();
        cy.wait(2000);
-       cy.get('[class="sc-c745da30-0 sc-c745da30-1 cYPMzZ fsYpjy"]').click();                                           // clkick on submit after selecting all the answer the question
+       cy.get('[class="sc-c745da30-0 sc-c745da30-1 cYPMzZ fsYpjy"]').click();                                           // click on submit after selecting all the answer the question
        cy.wait(2000);
        cy.get('[class="sc-6e8c36d4-9 sc-c2fffe2d-2 kcIjQb hLZmAf input"]').eq(0).type('Apoorva Joshi');                 // Entering personal details on the popup
        cy.get('[class="sc-6e8c36d4-9 sc-c2fffe2d-2 kcIjQb hLZmAf input"]').eq(1).type('apoorva.joshi@cimet.com.au');
        cy.get('[class="sc-6e8c36d4-9 sc-c2fffe2d-2 kcIjQb hLZmAf input"]').eq(2).type('0420580919');
        cy.get('[type="submit"]').click();
-       cy.wait(300000);
+       cy.wait(500000);
        cy.get('[class="sc-5f6771a7-0 fokmtS"]').eq(5).click();
        cy.get('[class="sc-cb7c3484-0 hrIcIT"]').eq(0).click();     
        cy.wait(100000);
