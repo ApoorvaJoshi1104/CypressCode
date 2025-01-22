@@ -17,27 +17,29 @@ describe('Open Energy', () => {
           cy.get('[aria-label="Digit 4"]').type('5');
           cy.get('[type="submit"]').click();
           cy.wait(4000);
-          cy.get('[class="sc-6392884d-0 sc-6392884d-1 exNNAT ckOEOs"]').should('exist').click(); 
-          cy.get('[class="sc-6392884d-0 sc-6392884d-1 sc-ace91e74-1 exNNAT ckOEOs eKPPXU"]').click();
-          cy.origin('https://auth2.fiskil.com/', () => {
-           cy.get('[class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium mui-style-1tn97a7"]').click();
-           cy.get('[class="MuiTypography-root MuiTypography-body1 mui-style-192jd74"]').click(); 
-         });
-            cy.log(`email: ${email}`);
-            cy.get('[name="email"]').type(email);
-            cy.get('[class="m-0 p-0 text-sm text-inherit leading-4"]').eq(1).click();
-            cy.get('a[target="_blank"]')
+          cy.contains('button', 'Let’s start now').click();
+          cy.get('[class="sc-c745da30-0 sc-c745da30-1 sc-f498c5ab-1 fUmlUa kwylhJ cdAtuD"]').should('exist').click(); 
+          cy.origin('https://auth2.fiskil.com/?sess_id=2rvkvrh9DKFFjq5cc6MM9I2o15r/', (email) => {
+            cy.get('[class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium mui-style-1tn97a7"]').click();
+            cy.get('[class="MuiTypography-root MuiTypography-body1 mui-style-192jd74"]').click(); 
+          });
+          cy.log(`email: ${email}`);
+          cy.wait(2000);
+          cy.get('[placeholder="Enter your email"]').type(email);
+          cy.get('[class="m-0 p-0 text-sm text-inherit leading-4"]').click();
+            //   cy.get('[class="m-0 p-0 text-sm text-inherit leading-4"]').eq(1).click();  
+          cy.get('a[target="_blank"]')
             .should('have.attr', 'href')
-            .then((url) => {
-            cy.visit('https://yopmail.com/');
-            cy.get('[name="login"]').type('apoorva.joshi.cimet');
-            cy.get('[class="material-icons-outlined f36"]').click();
-            cy.get('table tbody:nth-child(1) tr:nth-child(2) td:nth-child(0) p').invoke('text').as('copiedText');
-            cy.get('@copiedText').then((text) => {
-               cy.log(text);
-               expect(text.trim()).to.eq('Expected Text');
+                .then((url) => {
+              cy.visit('https://yopmail.com/');
+              cy.get('[name="login"]').type('apoorva.joshi.cimet');
+              cy.get('[class="material-icons-outlined f36"]').click();
+              cy.get('table tbody:nth-child(1) tr:nth-child(2) td:nth-child(0) p').invoke('text').as('copiedText');
+              cy.get('@copiedText').then((text) => {
+              cy.log(text);
+              expect(text.trim()).to.eq('Expected Text');
              });
-            });
+            });    
             cy.get('a[target="_blank"]')
             .should('have.attr', 'href')
             .then((url) => {
