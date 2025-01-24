@@ -18,8 +18,8 @@ describe('Open Energy', () => {
           cy.get('[type="submit"]').click();
           cy.wait(4000);
           cy.contains('button', 'Let’s start now').click();
-          cy.get('[class="sc-c745da30-0 sc-c745da30-1 sc-f498c5ab-1 fUmlUa kwylhJ cdAtuD"]').should('exist').click(); 
-          cy.origin('https://auth2.fiskil.com/?sess_id=2rvkvrh9DKFFjq5cc6MM9I2o15r/', (email) => {
+          cy.contains('button', 'Proceed to CDR consent').click(); 
+          cy.origin('https://auth2.fiskil.com/?sess_id=2rvkvrh9DKFFjq5cc6MM9I2o15r/', () => {
             cy.get('[class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium mui-style-1tn97a7"]').click();
             cy.get('[class="MuiTypography-root MuiTypography-body1 mui-style-192jd74"]').click(); 
           });
