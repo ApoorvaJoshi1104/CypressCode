@@ -14,16 +14,16 @@ describe ('Energy', () => {
        cy.get('[class="sc-309fbc61-0 fMPLzp"]').eq(10).click();
        cy.get('[type="checkbox"]').click();
        cy.wait(2000);
-       cy.get('[class="sc-c745da30-0 sc-c745da30-1 cYPMzZ fsYpjy"]').click();                                           // click on submit after selecting all the answer the question
+       cy.get('[class="sc-7f67791e-0 sc-7f67791e-1 khdfpI gqzmtj"]').click();                                           // click on submit after selecting all the answer the question
        cy.wait(2000);
-       cy.get('[class="sc-6e8c36d4-9 sc-c2fffe2d-2 kcIjQb hLZmAf input"]').eq(0).type('Apoorva Joshi');                 // Entering personal details on the popup
-       cy.get('[class="sc-6e8c36d4-9 sc-c2fffe2d-2 kcIjQb hLZmAf input"]').eq(1).type('apoorva.joshi@cimet.com.au');
-       cy.get('[class="sc-6e8c36d4-9 sc-c2fffe2d-2 kcIjQb hLZmAf input"]').eq(2).type('0420580919');
+       cy.get('[name="name"]').type('Apoorva Joshi');                 // Entering personal details on the popup
+       cy.get('[name="email"]').type('apoorva.joshi@cimet.com.au');
+       cy.get('[name="phone"]').type('0420580919');
        cy.get('[type="submit"]').click();
-       cy.wait(500000);
-       cy.get('[class="sc-5f6771a7-0 fokmtS"]').eq(5).click();
+       cy.wait(150000);
+       cy.get('[class="sc-93dc423a-2 iKqRVf"]').click();
        cy.get('[class="sc-cb7c3484-0 hrIcIT"]').eq(0).click();     
-       cy.wait(100000);
+       cy.wait(10000);
        cy.contains('Miss').click();
        cy.get('[name="dateOfBirth"]').type('11/04/1996');
        cy.get('[class="sc-6e8c36d4-6 sc-f6926cfa-3 bWIHpw ePldHl"]').eq(1).click();
@@ -42,8 +42,8 @@ describe ('Energy', () => {
        cy.get('[name="secondary.passport_number"]').type('12345678900');
        cy.get('[name="secondary.passport_expiry_date"]').type('12/07/2026');
        cy.contains('Medical Information').click();                                                                        // selection answer related to medical information
-       cy.get('[class="sc-3e6fedca-8 fjhHIp"]').eq(23).click();
-       cy.get('[class="sc-3e6fedca-8 fjhHIp"]').eq(25).click();
+       cy.get('[class="sc-8bc41c5a-2 eSawVP"]').eq(17).click();
+       cy.get('[class="sc-8bc41c5a-2 eSawVP"]').eq(18).click();
        cy.get('[class="sc-6e8c36d4-6 sc-f6926cfa-3 bWIHpw ePldHl"]');
        cy.wait(3000);
        cy.contains('button', 'Continue to Connection Details').click();
