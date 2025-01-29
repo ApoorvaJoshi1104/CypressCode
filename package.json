@@ -66,13 +66,14 @@
   "devDependencies": {
     "@bahmutov/print-env": "1.3.0",
     "@stylistic/eslint-plugin-js": "2.10.1",
-    "cypress": "13.17.0",
+    "cypress": "^13.17.0",
     "eslint": "9.14.0",
     "eslint-plugin-cypress": "4.1.0",
     "eslint-plugin-jsonc": "2.17.0",
     "eslint-plugin-mocha": "10.5.0",
     "globby": "11.1.0",
     "husky": "9.0.6",
+    "mocha": "^11.1.0",
     "semantic-release": "24.1.3",
     "start-server-and-test": "2.0.9",
     "yaml-lint": "1.7.0"
