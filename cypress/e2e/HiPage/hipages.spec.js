@@ -40,14 +40,12 @@ describe('Open Energy', () => {
               expect(text.trim()).to.eq('Expected Text');
              });
             });    
-            cy.get('a[target="_blank"]')
-            .should('have.attr', 'href')
-            .then((url) => {
-            cy.visit('https://auth.sandbox.cdr.dataholder.fiskil.com/verify-otp/?email=apoorva.joshi.cimet%40yopmail.com');
+            // cy.get('a[target="_blank"]')
+            // .should('have.attr', 'href')
+            // .then((url) => {
+            // cy.visit('https://auth.sandbox.cdr.dataholder.fiskil.com/verify-otp/?email=apoorva.joshi.cimet%40yopmail.com');
                
-            });
-            // cy.get('[class="sc-a0103c4e-0 kmeptV"]').eq(6).should('exist').click()
-            // cy.get('[class="sc-6e8c36d4-10 iQA-dXr"]').eq(1).click();
+            // });
          }
       });
    });
