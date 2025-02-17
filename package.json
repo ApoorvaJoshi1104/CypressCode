@@ -60,6 +60,8 @@
   },
   "homepage": "https://github.com/cypress-io/cypress-example-kitchensink#readme",
   "dependencies": {
+    "cypress-iframe": "^1.0.1",
+    "cypress-mailslurp": "^1.10.0",
     "npm-run-all2": "7.0.1",
     "serve": "14.2.4"
   },
