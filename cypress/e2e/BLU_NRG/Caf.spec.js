@@ -62,7 +62,7 @@ describe ('Energy', () => {
        cy.get('[name="customerName"]').type('Apoorva Joshi');
        cy.get('[name="accountNo"]').type('123456789');
        cy.get('[name="BSB"]').type('123456');
-       cy.wait(3000);
+      //  cy.wait(3000);
        cy.get('[class="sc-6e8c36d4-6 sc-f6926cfa-3 bWIHpw ePldHl"]').eq(3);
        cy.contains('button', 'Continue to Review Details').click();                                                          // click submit and move to review page
        cy.wait(3000);
